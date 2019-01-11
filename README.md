@@ -137,6 +137,8 @@ UDP multicast address 239.255.0.100:30000. To receive them you can use [socat][]
 
     $ socat udp4-recv:30000,ip-add-membership=239.255.0.100:0.0.0.0 -
 
+On MacOSX you should install Xcode, Brew and install cmake with `brew install cmake`. Ninja-build is not available on Brew and you should fetch it manually from [their github](https://github.com/ninja-build/ninja/releases/latest). Also, notice you'd need to [set unix fileformat on ci/ci.sh and ci/setup_conan.sh](https://stackoverflow.com/questions/2920416/configure-bin-shm-bad-interpreter).
+
 # License
 
 This software is released under the 2-clause BSD license.
